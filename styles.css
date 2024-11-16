@@ -1,0 +1,235 @@
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Contêiner principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #2a8e5f;
+}
+
+header p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Navegação */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+    background-color: #2a8e5f;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #2a8e5f;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Seções */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 28px;
+    color: #2a8e5f;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+section p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+}
+
+section ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+section ul li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Dot-container (bolinhas) */
+.dot-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: #2a8e5f;
+    border-radius: 50%;
+    margin: 0 10px;
+    animation: dotAnimation 1.5s infinite ease-in-out;
+}
+
+.dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes dotAnimation {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2a8e5f;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section p, section ul li {
+        font-size: 16px;
+    }
+
+    .dot-container {
+        margin-top: 30px;
+    }
+}
+
+/* Estilos para o carrossel */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden; /* Esconde as imagens fora da área visível */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease; /* Suaviza o movimento do carrossel */
+}
+
+.carousel-images {
+    display: flex;
+}
+
+.carousel-item {
+    width: 100%; /* Faz cada item ocupar 100% da largura do contêiner */
+    max-width: 500px; /* Ajuste do tamanho máximo das imagens */
+    height: auto;
+    object-fit: cover; /* Faz com que as imagens se ajustem corretamente ao tamanho do contêiner */
+}
+
+/* Botões de navegação do carrossel */
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsividade do carrossel */
+@media (max-width: 768px) {
+    .carousel-item {
+        max-width: 100%;
+    }
+}

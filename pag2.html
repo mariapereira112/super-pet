@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>SuperPets - Produtos</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pag2.html">Produtos</a></li>
+                <li><a href="pag3.html">Sobre</a></li>
+                <li><a href="pag4.html">Contato</a></li>
+                <li><a href="pag5.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="produtos">
+        <h2>Produtos maravilhosos</h2>
+
+        <div class="carousel-container">
+        
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="./fotos/foto1.jpg" alt="Produto 1" class="carousel-item">
+                    <img src="./fotos/foto2.jpg" alt="Produto 2" class="carousel-item">
+                    <img src="./fotos/foto3.jpg" alt="Produto 3" class="carousel-item">
+                    <img src="./fotos/foto4.jpg" alt="Produto 4" class="carousel-item">
+                </div>
+            </div>
+
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SuperPets</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

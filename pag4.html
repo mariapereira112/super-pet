@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title><Super-pet></Super-pet></title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pag2.html">Produtos</a></li>
+                <li><a href="pag3.html">Sobre</a></li>
+                <li><a href="pag4.html">Contato</a></li>
+                <li><a href="pag5.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+  <div class="container">
+    <header>
+        <h1>Contato</h1>
+        <p>Entre em contato conosco para mais informações!</p>
+    </header>
+
+    <section id="formulario">
+        <form action="/enviar-contato" method="POST">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            
+            <div class="form-group">
+                <input type="submit" value="Enviar">
+            </div>
+          
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 SuperPets</p>
+</footer>
+</body>
+</html>
